@@ -1,4 +1,5 @@
 ## 项目名称： 懒大厨
+<img src="https://img-blog.csdnimg.cn/20200520095243967.png"/>
 项目已完成，下载可以直接运行看效果
 #### 功能
 本人练手项目，菜谱类app，前期功能比较较简单，包含以下模块：
@@ -20,6 +21,14 @@
  
  #### 效果展示
  <table>
+ <tr>
+ 		<td>
+ 		 <img src="https://img-blog.csdnimg.cn/20200520111612237.png" width="50%"/>
+ 		</td>
+ 		<td>
+ 		  <img src="https://img-blog.csdnimg.cn/20200520111612237.png" width="50%"/>
+ 		 </td>
+ 	</tr>
  	<tr>
  		<td>
  		<img src="https://img-blog.csdnimg.cn/20200520102345117.png" width="50%"/>
@@ -45,4 +54,3 @@
  		 </td>
  	</tr>
  </table>
- 
