@@ -2,7 +2,9 @@
 <img src="https://img-blog.csdnimg.cn/20200520095243967.png"/>
 
 项目已完成，下载可以直接运行看效果
+
 <img src="https://storage-1255928497.cos.ap-guangzhou.myqcloud.com/lazycook/qr.png" width="40%"/>
+
 扫码下载或[点击下载](https://storage-1255928497.cos.ap-guangzhou.myqcloud.com/lazycook/lazycook.apk)
 #### 功能
 本人练手项目，菜谱类app，前期功能比较较简单，包含以下模块：
