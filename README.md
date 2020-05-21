@@ -59,5 +59,3 @@
  		 </td>
  	</tr>
  </table>
-
-[源码地址](https://github.com/MrDavy/lazycook_flutter)
