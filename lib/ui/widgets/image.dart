@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:lazycook/utils/logger.dart';
 import 'package:lazycook/utils/string_utils.dart';
@@ -21,7 +23,17 @@ class LdcImage extends StatelessWidget {
     var scheme = Uri.parse(img).scheme;
     Logger("LdcImage").log("scheme = $scheme");
     return scheme == "http" || scheme == "https"
-        ? Image.network(img, width: width, height: height)
+        ? CachedNetworkImage(
+            placeholder: (context, url) => SizedBox(
+              width: 36,
+              height: 36,
+              child: CircularProgressIndicator(),
+            ),
+            imageUrl: img,
+            width: width,
+            height: height,
+            fit: BoxFit.contain,
+          )
         : Image.file(File(img), width: width, height: height);
   }
 }

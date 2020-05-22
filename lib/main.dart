@@ -44,13 +44,13 @@ void main() async {
   if (Platform.isAndroid) {
     SystemUiOverlayStyle systemUiOverlayStyle = SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
-        statusBarBrightness: Brightness.dark,
+        statusBarBrightness: Brightness.light,
         systemNavigationBarColor: Colors.black);
     SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
   } else {
     SystemUiOverlayStyle systemUiOverlayStyle = SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
-        statusBarBrightness: Brightness.dark,
+        statusBarBrightness: Brightness.light,
         systemNavigationBarColor: Colors.black);
     SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
   }

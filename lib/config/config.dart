@@ -8,7 +8,7 @@ import 'envconfig/test.dart';
 
 class Config {
   ///当前环境,由于测试环境没有部署在外网，此处使用prod
-  static const Env env = Env.prod;
+  static const Env env = Env.huidu;
 
   static bool isDebug() {
     return env != Env.prod;

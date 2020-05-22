@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lazycook/application.dart';
 import 'package:lazycook/core/models/result_data.dart';
 import 'package:lazycook/core/models/version_info.dart';
@@ -59,10 +60,11 @@ class _AboutPageState extends CustomState<AboutPage> {
                     shrinkWrap: true,
                     physics: ScrollPhysics(),
                     children: <Widget>[
-                      Image.asset(
-                        "assets/images/icon-app.png",
-                        width: 152,
-                        height: 152,
+                      SvgPicture.asset(
+                        "assets/svg/logo.svg",
+                        color: themeAccentColor,
+                        width: width(152),
+                        height: width(152),
                       ),
                       Container(
                         alignment: Alignment.center,

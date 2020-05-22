@@ -39,9 +39,13 @@ class ThemeModel extends BaseChangeNotifier {
 const accentColors = [
   const Color(0xffff9900),
   const Color(0xff3f48cc),
-  const Color(0xffffaec8)
+  const Color(0xffffaec8),
+  const Color(0xfff87009),
+  const Color(0xffec1c24)
 ];
 const secondColors = [
+  const Color(0xFFFF6757),
+  const Color(0xFFFF6757),
   const Color(0xFFFF6757),
   const Color(0xFFFF6757),
   const Color(0xFFFF6757)

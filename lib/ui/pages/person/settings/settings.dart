@@ -59,7 +59,7 @@ class _SettingsPageState extends CustomState<SettingsPage> {
                 children: <Widget>[
                   Container(
                       margin: EdgeInsets.only(
-                          top: height(16), left: width(16), right: width(16)),
+                          top: height(12), left: width(12), right: width(12)),
                       decoration: BoxDecoration(
                           color: white,
                           borderRadius: BorderRadius.circular(width(6))),
@@ -74,7 +74,7 @@ class _SettingsPageState extends CustomState<SettingsPage> {
                               "主题色",
                               style: textStyle(
                                   color: themeAccentColor,
-                                  fontSize: sp(14),
+                                  fontSize: sp(16),
                                   fontWeight: FontWeight.w600),
                             ),
                           ),
