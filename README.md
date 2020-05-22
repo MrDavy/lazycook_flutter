@@ -15,7 +15,7 @@
  
  #### 技术实现
  
- - Provider实现组件的状态管理，做到局部刷新
+ - Provider实现组件的状态管理、主题色设置等
  - 自定义LoadContainer、ListContainer、SlideListContainer容器等
  - 自定义Dialog，包括LoadingDialog、[自定义布局Dialog](https://blog.csdn.net/qq627578198/article/details/105486722)等
  - 在[photo_view](https://github.com/renancaraujo/photo_view)、[image_picker](https://github.com/flutter/plugins)基础上，自定义[图片裁剪](https://blog.csdn.net/qq627578198/article/details/103981254)
