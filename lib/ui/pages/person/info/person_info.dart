@@ -134,7 +134,7 @@ class _PersonInfoPageState extends CustomState<PersonInfoPage> {
                             ),
                             Icon(
                               Icons.keyboard_arrow_right,
-                              color: lineColor,
+                              color: color_ed,
                             )
                           ],
                         )
@@ -203,7 +203,7 @@ class _PersonInfoPageState extends CustomState<PersonInfoPage> {
                             ),
                             Icon(
                               Icons.keyboard_arrow_right,
-                              color: lineColor,
+                              color: color_ed,
                             )
                           ],
                         )

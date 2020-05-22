@@ -102,7 +102,7 @@ class CustomDialog extends BaseDialog {
             child: Text(
               confirmText,
               style: textStyle(
-                  color: confirmColor ?? accentColor,
+                  color: confirmColor ?? Theme.of(context).accentColor,
                   fontSize: sp(16),
                   fontWeight: FontWeight.w400),
             ),

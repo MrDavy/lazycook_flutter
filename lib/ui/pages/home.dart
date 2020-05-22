@@ -153,7 +153,8 @@ class HomePageState extends CustomState<HomePage> {
     return Selector<HomeModel, bool>(
         builder: (context, reachTop, _) {
           return Container(
-            color: reachTop ? Colors.transparent : accentColor,
+            color:
+                reachTop ? Colors.transparent : themeAccentColor,
           );
         },
         selector: (context, model) => model.reachTop);
@@ -266,7 +267,9 @@ class HomePageState extends CustomState<HomePage> {
             builder: (context, reachTop, _) {
               return Container(
                 height: height(48),
-                color: reachTop ? Colors.transparent : accentColor,
+                color: reachTop
+                    ? Colors.transparent
+                    : themeAccentColor,
               );
             },
             selector: (context, model) => model.reachTop),
@@ -348,7 +351,7 @@ class HomePageState extends CustomState<HomePage> {
                     pagination: SwiperPagination(
                         builder: DotSwiperPaginationBuilder(
                       color: Colors.white,
-                      activeColor: Theme.of(context).accentColor,
+                      activeColor: themeAccentColor,
                       size: width(6),
                       activeSize: width(6),
                     )),
@@ -579,8 +582,8 @@ class HomePageState extends CustomState<HomePage> {
         Text(
           category.name,
           maxLines: 1,
-          style: textStyle(
-              color: textColor, fontSize: sp(12), fontWeight: bold),
+          style:
+              textStyle(color: textColor, fontSize: sp(12), fontWeight: bold),
         )
       ],
     );

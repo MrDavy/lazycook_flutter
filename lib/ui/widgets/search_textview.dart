@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:lazycook/ui/shared/colors.dart';
 import 'package:lazycook/ui/shared/styles.dart';
 import 'package:lazycook/ui/widgets/base_state.dart';
 
@@ -26,12 +27,12 @@ class SearchView extends StatefulWidget {
     this.focusNode,
     this.controller,
     this.autofocus = true,
-    this.borderColor = const Color(0xffffffff),
-    this.fillColor = const Color(0xffffffff),
+    this.borderColor = white,
+    this.fillColor = white,
     this.hintText,
     this.hintColor = const Color(0x60969696),
-    this.contentColor = const Color(0xff222222),
-    this.prefixIcon = const Icon(Icons.search, color: Color(0xff999999)),
+    this.contentColor = color_222,
+    this.prefixIcon = const Icon(Icons.search, color: color_999),
     this.onFieldSubmitted,
     this.onClick,
   });

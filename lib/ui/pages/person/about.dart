@@ -93,9 +93,9 @@ class _AboutPageState extends CustomState<AboutPage> {
                             decoration: BoxDecoration(
                                 border: Border(
                                     top: BorderSide(
-                                        color: Color(0xafcccccc), width: 0.5),
+                                        color: lineColor, width: 0.5),
                                     bottom: BorderSide(
-                                        color: Color(0xafcccccc), width: 0.5))),
+                                        color: lineColor, width: 0.5))),
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,

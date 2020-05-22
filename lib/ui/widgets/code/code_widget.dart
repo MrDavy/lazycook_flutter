@@ -79,7 +79,7 @@ class CodeFieldState extends CustomState<CodeField> {
         showCursor: false,
         textAlignVertical: TextAlignVertical.center,
         textInputAction: TextInputAction.done,
-        cursorColor: accentColor,
+        cursorColor: themeAccentColor,
         textCapitalization: TextCapitalization.words,
         keyboardType:
             TextInputType.numberWithOptions(signed: true, decimal: false),
@@ -96,7 +96,7 @@ class CodeFieldState extends CustomState<CodeField> {
           labelText: "验证码",
           hintText: "请输入手机验证码",
           labelStyle: textStyle(fontWeight: bold),
-          focusColor: accentColor,
+          focusColor: themeAccentColor,
 //                    icon: Icon(Icons.phone_iphone),
           //下划线包裹icon
           prefixIcon: Icon(Icons.mail),
@@ -126,7 +126,7 @@ class CodeFieldState extends CustomState<CodeField> {
               return RaisedButton(
                 disabledElevation: 0,
                 disabledColor: buttonDisableColor,
-                color: accentColor,
+                color: themeAccentColor,
                 elevation: 0,
                 highlightElevation: 0,
                 padding: EdgeInsets.symmetric(

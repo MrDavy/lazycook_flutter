@@ -104,7 +104,7 @@ class WorkTabBarViewState extends CustomState<WorkTabBarView> {
   List<SlideMenu> _buildItemMenus(int index) {
     List<Opt> opts = _worksModel.list[index].data.opt;
     if (opts == null || opts.isEmpty) return null;
-    Color bgColor = accentColor;
+    Color bgColor = themeAccentColor;
     Widget widget;
     if (opts.length == 1) {
       widget = InkWell(

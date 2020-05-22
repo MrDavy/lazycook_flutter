@@ -57,8 +57,8 @@ class _WorksPageState extends CustomState<WorksPage>
           title: "我的作品",
           decoration: BoxDecoration(gradient: defaultGradient(context)),
 //          decoration: BoxDecoration(color: white),
-//          statusBarColor: accentColor,
-//          headerDecoration: BoxDecoration(color: accentColor),
+//          statusBarColor: themeAccentColor,
+//          headerDecoration: BoxDecoration(color: themeAccentColor),
           child: Container(
             color: white,
             child: ProviderWidget(
@@ -129,7 +129,7 @@ class _WorksPageState extends CustomState<WorksPage>
     return TabBar(
         controller: _tabController,
         labelPadding: EdgeInsets.symmetric(vertical: height(4)),
-        labelColor: accentColor,
+        labelColor: themeAccentColor,
         labelStyle: textStyle(
           fontSize: sp(16),
           fontWeight: FontWeight.w600,
@@ -139,7 +139,7 @@ class _WorksPageState extends CustomState<WorksPage>
           fontSize: sp(16),
           fontWeight: bold,
         ),
-        indicatorColor: accentColor,
+        indicatorColor: themeAccentColor,
         indicatorPadding: EdgeInsets.symmetric(horizontal: width(10)),
         indicatorSize: TabBarIndicatorSize.label,
         isScrollable: false,

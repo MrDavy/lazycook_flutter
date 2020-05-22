@@ -27,14 +27,18 @@ abstract class CustomState<T extends StatefulWidget> extends BaseState<T>
   bool dialogShowing = false;
   BuildContext buildContext;
   BuildContext scaffoldContext;
+  Color _accentColor;
 
   bool keepAlive() => false;
 
   bool darkStatusBar() => false;
 
+  Color get themeAccentColor => _accentColor;
+
   @override
   Widget build(BuildContext context) {
     if (keepAlive()) super.build(context);
+    _accentColor = Theme.of(context).accentColor;
     buildContext = context;
     return AnnotatedRegion(
         child: buildWidget(context),

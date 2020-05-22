@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lazycook/application.dart';
 import 'package:lazycook/config/providers_setup.dart';
 import 'package:lazycook/core/viewmodels/config/local.dart';
+import 'package:lazycook/core/viewmodels/config/theme.dart';
 import 'package:lazycook/core/viewmodels/person/about.dart';
 import 'package:lazycook/core/viewmodels/person/login/user_model.dart';
 import 'package:lazycook/ui/pages/home.dart';
@@ -29,20 +31,20 @@ class LazyCookApp extends StatelessWidget {
   }
 
   Widget _build(context) {
-    return Consumer<LocalModel>(
-      builder: (context, localModel, _) {
+    return Consumer2<ThemeModel, LocalModel>(
+      builder: (context, themeModel, localModel, _) {
         return MaterialApp(
           title: '懒大厨',
 //          debugShowCheckedModeBanner: false,
           theme: ThemeData(
             brightness: Brightness.light,
             splashFactory: NoSplashFactory(),
-//              splashColor: accentColor,
-            primaryColor: primaryColor,
-            primaryColorDark: primaryColorDark,
+//              splashColor: themeAccentColor,
+            primaryColor: themeModel.accentColor,
+            primaryColorDark: themeModel.accentColor,
             platform: TargetPlatform.iOS,
             errorColor: warnColor,
-            accentColor: accentColor,
+            accentColor: themeModel.accentColor,
             textTheme: Theme.of(context).textTheme,
           ),
           home: MyHomePage(),
@@ -88,8 +90,8 @@ class _MyHomePageState extends CustomState<MyHomePage> {
         currentIndex: _currentIndex,
         selectedFontSize: sp(10),
         unselectedFontSize: sp(10),
-        unselectedItemColor: Color(0xff656565),
-        selectedItemColor: Color(0xffff9900),
+        unselectedItemColor: Color(0xff8a8a8a),
+        selectedItemColor: themeAccentColor,
         selectedLabelStyle: textStyle(fontSize: sp(10)),
         unselectedLabelStyle: textStyle(fontSize: sp(10)),
         onTap: (index) {
@@ -108,17 +110,17 @@ class _MyHomePageState extends CustomState<MyHomePage> {
   generateItems() {
     final List<BottomNavigationBarItem> _list = <BottomNavigationBarItem>[
       BottomNavigationBarItem(
-          icon: Image(
-            image: AssetImage('assets/images/nav-home-off.png'),
+          icon: SvgPicture.asset(
+            "assets/svg/nav-home.svg",
             width: width(28),
             height: width(28),
-            fit: BoxFit.fitWidth,
+            color: Color(0xffbfbfbf),
           ),
-          activeIcon: Image(
-            image: AssetImage('assets/images/nav-home-on.png'),
+          activeIcon: SvgPicture.asset(
+            "assets/svg/nav-home.svg",
             width: width(28),
             height: width(28),
-            fit: BoxFit.fitWidth,
+            color: themeAccentColor,
           ),
           title: Text('首页')),
 //      BottomNavigationBarItem(
@@ -150,17 +152,17 @@ class _MyHomePageState extends CustomState<MyHomePage> {
 //          ),
 //          title: Text('菜篮子')),
       BottomNavigationBarItem(
-          icon: Image(
-            image: AssetImage('assets/images/nav-mine-off.png'),
+          icon: SvgPicture.asset(
+            "assets/svg/nav-mine.svg",
             width: width(28),
             height: width(28),
-            fit: BoxFit.fitWidth,
+            color: Color(0xff8a8a8a),
           ),
-          activeIcon: Image(
-            image: AssetImage('assets/images/nav-mine-on.png'),
+          activeIcon: SvgPicture.asset(
+            "assets/svg/nav-mine.svg",
             width: width(28),
             height: width(28),
-            fit: BoxFit.fitWidth,
+            color: themeAccentColor,
           ),
           title: Text('我的')),
     ];

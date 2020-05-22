@@ -72,7 +72,7 @@ class LoginPageState extends CustomState<LoginPage> {
   Widget buildWidget(BuildContext context) {
     _themeData = Theme.of(context);
     _inputDecoration =
-        createDecoration(borderColor, accentColor, _themeData.errorColor);
+        createDecoration(borderColor, themeAccentColor, _themeData.errorColor);
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
@@ -152,7 +152,7 @@ class LoginPageState extends CustomState<LoginPage> {
   Widget _loginButton() {
     return Button(
       margin: EdgeInsets.fromLTRB(width(30), height(22), width(30), height(0)),
-      accentColor: accentColor,
+      accentColor: themeAccentColor,
       text: "立即登陆",
       onPressed: () async {
         bool isPwd = _loginModel.loginWithPwd;
@@ -269,7 +269,7 @@ class LoginPageState extends CustomState<LoginPage> {
         WhitelistingTextInputFormatter.digitsOnly,
         LengthLimitingTextInputFormatter(11)
       ],
-      cursorColor: accentColor,
+      cursorColor: themeAccentColor,
       toolbarOptions: ToolbarOptions(),
       decoration: InputDecoration(
         focusedErrorBorder: _inputDecoration['focusedErrorBorder'],
@@ -279,7 +279,7 @@ class LoginPageState extends CustomState<LoginPage> {
         labelText: "手机号",
         hintText: "输入用户手机号",
         labelStyle: inputLabelStyle(),
-        focusColor: accentColor,
+        focusColor: themeAccentColor,
         prefixIcon: Icon(Icons.phone_iphone),
         hintStyle: textStyle(
             color: hintColor, fontWeight: FontWeight.w400, fontSize: sp(14)),
@@ -318,7 +318,7 @@ class LoginPageState extends CustomState<LoginPage> {
         cursorWidth: width(1),
         textAlignVertical: TextAlignVertical.center,
         textInputAction: TextInputAction.done,
-        cursorColor: accentColor,
+        cursorColor: themeAccentColor,
         obscureText: Platform.isIOS ? false : !pwdVisible,
         textCapitalization: TextCapitalization.words,
         keyboardType: TextInputType.visiblePassword,
@@ -331,7 +331,7 @@ class LoginPageState extends CustomState<LoginPage> {
           labelText: "密码",
           hintText: "请输入密码",
           labelStyle: inputLabelStyle(),
-          focusColor: accentColor,
+          focusColor: themeAccentColor,
           //下划线包裹icon
           prefixIcon: Icon(Icons.lock),
           suffixIcon: IconButton(
@@ -376,7 +376,7 @@ class LoginPageState extends CustomState<LoginPage> {
         cursorWidth: width(1),
         textAlignVertical: TextAlignVertical.center,
         textInputAction: TextInputAction.done,
-        cursorColor: accentColor,
+        cursorColor: themeAccentColor,
         textCapitalization: TextCapitalization.words,
         keyboardType:
             TextInputType.numberWithOptions(signed: true, decimal: false),
@@ -393,7 +393,7 @@ class LoginPageState extends CustomState<LoginPage> {
           labelText: "验证码",
           hintText: "请输入手机验证码",
           labelStyle: inputLabelStyle(),
-          focusColor: accentColor,
+          focusColor: themeAccentColor,
 //                    icon: Icon(Icons.phone_iphone),
           //下划线包裹icon
           prefixIcon: Icon(Icons.mail),
@@ -445,7 +445,7 @@ class LoginPageState extends CustomState<LoginPage> {
                   builder: (context, withPwd, child) => Text(
                         withPwd ? "短信登录" : "密码登录",
                         style: textStyle(
-                          color: accentColor,
+                          color: themeAccentColor,
                           fontSize: sp(14),
                           fontWeight: bold,
                         ),
@@ -466,7 +466,7 @@ class LoginPageState extends CustomState<LoginPage> {
             child: Text(
               "|",
               style: textStyle(
-                  color: accentColor,
+                  color: themeAccentColor,
                   fontSize: sp(14),
                   fontWeight: FontWeight.w900),
             ),
@@ -478,7 +478,7 @@ class LoginPageState extends CustomState<LoginPage> {
               child: Text(
                 "注册账号",
                 style: textStyle(
-                  color: accentColor,
+                  color: themeAccentColor,
                   fontSize: sp(14),
                   fontWeight: bold,
                 ),
@@ -581,7 +581,7 @@ class LoginPageState extends CustomState<LoginPage> {
             return RaisedButton(
               disabledElevation: 0,
               disabledColor: buttonDisableColor,
-              color: accentColor,
+              color: themeAccentColor,
               elevation: 0,
               highlightElevation: 0,
               shape: RoundedRectangleBorder(

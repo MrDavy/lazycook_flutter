@@ -2,6 +2,7 @@ import 'package:lazycook/core/models/home_info.dart';
 import 'package:lazycook/core/models/user.dart';
 import 'package:lazycook/core/request/local_repository.dart';
 import 'package:lazycook/core/viewmodels/config/local.dart';
+import 'package:lazycook/core/viewmodels/config/theme.dart';
 import 'package:lazycook/core/viewmodels/home/home_Info.dart';
 import 'package:lazycook/core/viewmodels/person/about.dart';
 import 'package:lazycook/core/viewmodels/person/auth_service.dart';
@@ -30,6 +31,9 @@ List<SingleChildWidget> independentServices = [
 
   ///国际化
   ChangeNotifierProvider(create: (context) => LocalModel()),
+
+  ///主题色彩
+  ChangeNotifierProvider(create: (context) => ThemeModel()),
 
   ///用户信息
   ChangeNotifierProvider<UserModel>(create: (context) {

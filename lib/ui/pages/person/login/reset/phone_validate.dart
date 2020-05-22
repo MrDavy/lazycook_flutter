@@ -47,7 +47,7 @@ class PhoneValidatePageState extends CustomState<PhoneValidatePage> {
   Widget buildWidget(BuildContext context) {
     _themeData = Theme.of(context);
     _inputDecoration =
-        createDecoration(borderColor, accentColor, _themeData.errorColor);
+        createDecoration(borderColor, themeAccentColor, _themeData.errorColor);
     return ChangeNotifierProvider(
       create: (context) {
         return _model;
@@ -95,7 +95,7 @@ class PhoneValidatePageState extends CustomState<PhoneValidatePage> {
   Widget _loginButton() {
     return Button(
       margin: EdgeInsets.fromLTRB(width(30), height(22), width(30), height(0)),
-      accentColor: accentColor,
+      accentColor: themeAccentColor,
       text: "下一步",
       onPressed: () async {
         if ((_formKey.currentState as FormState).validate()) {
@@ -171,7 +171,7 @@ class PhoneValidatePageState extends CustomState<PhoneValidatePage> {
         LengthLimitingTextInputFormatter(11)
       ],
       toolbarOptions: ToolbarOptions(),
-      cursorColor: accentColor,
+      cursorColor: themeAccentColor,
       decoration: InputDecoration(
         focusedErrorBorder: _inputDecoration['focusedErrorBorder'],
         focusedBorder: _inputDecoration['focusedBorder'],
@@ -180,7 +180,7 @@ class PhoneValidatePageState extends CustomState<PhoneValidatePage> {
         labelText: "手机号",
         hintText: "输入用户手机号",
         labelStyle: inputLabelStyle(),
-        focusColor: accentColor,
+        focusColor: themeAccentColor,
         prefixIcon: Icon(Icons.phone_iphone),
         hintStyle: textStyle(
             color: hintColor, fontWeight: FontWeight.w400, fontSize: sp(14)),

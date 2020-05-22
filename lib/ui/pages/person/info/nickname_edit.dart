@@ -48,7 +48,7 @@ class _NickNameEditPageState extends CustomState<NickNameEditPage> {
   Widget buildWidget(BuildContext context) {
     _themeData = Theme.of(context);
     _inputDecoration =
-        createDecoration(borderColor, accentColor, _themeData.errorColor);
+        createDecoration(borderColor, themeAccentColor, _themeData.errorColor);
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -91,7 +91,7 @@ class _NickNameEditPageState extends CustomState<NickNameEditPage> {
   Widget _loginButton() {
     return Button(
       margin: EdgeInsets.fromLTRB(width(30), height(22), width(30), height(0)),
-      accentColor: accentColor,
+      accentColor: themeAccentColor,
       text: "完成",
       onPressed: () async {
         if ((_formKey.currentState as FormState).validate()) {
@@ -149,7 +149,7 @@ class _NickNameEditPageState extends CustomState<NickNameEditPage> {
       inputFormatters: [LengthLimitingTextInputFormatter(8)],
       toolbarOptions: ToolbarOptions(),
       cursorWidth: width(1),
-      cursorColor: accentColor,
+      cursorColor: themeAccentColor,
       decoration: InputDecoration(
         focusedErrorBorder: _inputDecoration['focusedErrorBorder'],
         focusedBorder: _inputDecoration['focusedBorder'],
@@ -158,7 +158,7 @@ class _NickNameEditPageState extends CustomState<NickNameEditPage> {
         labelText: "昵称",
         hintText: "输入昵称",
         labelStyle: inputLabelStyle(),
-        focusColor: accentColor,
+        focusColor: themeAccentColor,
         prefixIcon: Icon(Icons.border_color,size: width(20),),
         hintStyle: textStyle(
             color: hintColor, fontWeight: FontWeight.w400, fontSize: sp(14)),

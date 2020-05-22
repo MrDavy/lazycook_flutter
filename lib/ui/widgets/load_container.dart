@@ -151,7 +151,7 @@ class LoadContainer extends StatelessWidget {
                         errorText,
                         style: textStyle(
                             fontSize: ScreenUtil.getInstance().setSp(12),
-                            color: Theme.of(context).accentColor),
+                            color: Theme.of(context).errorColor),
                       ),
                       SizedBox(
                         height: ScreenUtil.getInstance().setHeight(6),

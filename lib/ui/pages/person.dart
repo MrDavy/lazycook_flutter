@@ -174,7 +174,7 @@ class _PersonPageState extends CustomState<PersonPage> {
                     space: width(3),
                     assetImagePath: "assets/images/person_tag.png",
                     textStyle: textStyle(
-                        color: Color(0xFFFF6757),
+                        color: secondColor,
                         fontSize: sp(12),
                         fontWeight: bold),
                   )

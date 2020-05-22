@@ -127,7 +127,7 @@ class _ImageCropState extends CustomState<ImageCrop> {
                           ),
                           SizedBox(width: width(80)),
                           RaisedButton(
-                            color: accentColor,
+                            color: themeAccentColor,
                             onPressed: () async {
                               showLoading("保存中...");
                               ui.Image image =
@@ -161,7 +161,7 @@ class _ImageCropState extends CustomState<ImageCrop> {
     return Positioned(
       bottom: height(50),
       child: RaisedButton(
-        color: accentColor,
+        color: themeAccentColor,
         onPressed: () async {
           _crop();
         },

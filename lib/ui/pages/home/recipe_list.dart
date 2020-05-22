@@ -338,7 +338,7 @@ class RecipeListWidgetState extends CustomState<RecipeListWidget> {
       child: Chip(
         label: Text(searchBaseInfo.word),
         labelStyle: textStyle(
-          color: Color(0xff2d2d2d),
+          color: color_2d,
           fontSize: sp(12),
           fontWeight: bold,
         ),
@@ -412,7 +412,7 @@ class RecipeListWidgetState extends CustomState<RecipeListWidget> {
                 child: Chip(
                     label: Text(info.word),
                     labelStyle: textStyle(
-                        color: Color(0xff2d2d2d),
+                        color: color_2d,
                         fontSize: sp(12),
                         fontWeight: bold),
                     labelPadding: EdgeInsets.only(
@@ -440,7 +440,7 @@ class RecipeListWidgetState extends CustomState<RecipeListWidget> {
                       width: width(16),
                       height: width(16)),
                   labelStyle: textStyle(
-                      color: Color(0xff2d2d2d),
+                      color: color_2d,
                       fontSize: sp(12),
                       fontWeight: bold),
                   labelPadding: EdgeInsets.only(

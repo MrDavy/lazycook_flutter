@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
+import 'package:lazycook/core/viewmodels/base_model.dart';
 
-/**
- *
- */
-class LocalModel extends ChangeNotifier {}
+///
+/// 国际化
+///
+class LocalModel extends BaseChangeNotifier {}

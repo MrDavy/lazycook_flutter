@@ -81,7 +81,7 @@ class RegisterPageState extends CustomState<RegisterPage> {
   Widget buildWidget(BuildContext context) {
     _themeData = Theme.of(context);
     _inputDecoration =
-        createDecoration(borderColor, accentColor, _themeData.errorColor);
+        createDecoration(borderColor, themeAccentColor, _themeData.errorColor);
     return Scaffold(
       appBar: new AppBar(
         elevation: 0,
@@ -168,7 +168,7 @@ class RegisterPageState extends CustomState<RegisterPage> {
                   text: "《用户协议》",
                   style: textStyle(
                       decoration: TextDecoration.underline,
-                      color: accentColor,
+                      color: themeAccentColor,
                       fontSize: sp(10),
                       fontWeight: FontWeight.w400),
                   recognizer: _recognizer)
@@ -180,7 +180,7 @@ class RegisterPageState extends CustomState<RegisterPage> {
   Widget _registerButton() {
     return Button(
       margin: EdgeInsets.fromLTRB(width(30), height(22), width(30), height(0)),
-      accentColor: accentColor,
+      accentColor: themeAccentColor,
       text: "立即注册",
       onPressed: () async {
         if ((_formKey.currentState as FormState).validate()) {
@@ -248,7 +248,7 @@ class RegisterPageState extends CustomState<RegisterPage> {
         LengthLimitingTextInputFormatter(11)
       ],
       toolbarOptions: ToolbarOptions(),
-      cursorColor: accentColor,
+      cursorColor: themeAccentColor,
       decoration: InputDecoration(
         focusedErrorBorder: _inputDecoration['focusedErrorBorder'],
         focusedBorder: _inputDecoration['focusedBorder'],
@@ -257,7 +257,7 @@ class RegisterPageState extends CustomState<RegisterPage> {
         labelText: "手机号",
         hintText: "输入用户手机号",
         labelStyle: inputLabelStyle(),
-        focusColor: accentColor,
+        focusColor: themeAccentColor,
         prefixIcon: Icon(Icons.phone_iphone),
         hintStyle: textStyle(
             color: hintColor, fontWeight: FontWeight.w400, fontSize: sp(14)),
@@ -295,7 +295,7 @@ class RegisterPageState extends CustomState<RegisterPage> {
         cursorWidth: width(1),
         textAlignVertical: TextAlignVertical.center,
         textInputAction: TextInputAction.done,
-        cursorColor: accentColor,
+        cursorColor: themeAccentColor,
         obscureText: Platform.isIOS ? false : !pwdVisible,
         textCapitalization: TextCapitalization.words,
         keyboardType: TextInputType.visiblePassword,
@@ -309,7 +309,7 @@ class RegisterPageState extends CustomState<RegisterPage> {
           labelText: "密码",
           hintText: "请输入密码",
           labelStyle: inputLabelStyle(),
-          focusColor: accentColor,
+          focusColor: themeAccentColor,
           //下划线包裹icon
           prefixIcon: Icon(Icons.lock),
           suffixIcon: IconButton(
@@ -353,7 +353,7 @@ class RegisterPageState extends CustomState<RegisterPage> {
         cursorWidth: width(1),
         textAlignVertical: TextAlignVertical.center,
         textInputAction: TextInputAction.next,
-        cursorColor: accentColor,
+        cursorColor: themeAccentColor,
         textCapitalization: TextCapitalization.words,
         keyboardType:
             TextInputType.numberWithOptions(signed: true, decimal: false),
@@ -370,7 +370,7 @@ class RegisterPageState extends CustomState<RegisterPage> {
           labelText: "验证码",
           hintText: "请输入手机验证码",
           labelStyle: inputLabelStyle(),
-          focusColor: accentColor,
+          focusColor: themeAccentColor,
 //                    icon: Icon(Icons.phone_iphone),
           //下划线包裹icon
           prefixIcon: Icon(Icons.mail),
@@ -471,7 +471,7 @@ class RegisterPageState extends CustomState<RegisterPage> {
             return RaisedButton(
               disabledElevation: 0,
               disabledColor: buttonDisableColor,
-              color: accentColor,
+              color: themeAccentColor,
               elevation: 0,
               highlightElevation: 0,
               shape: RoundedRectangleBorder(

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:lazycook/core/request/exception/error.dart';
+import 'package:lazycook/core/viewmodels/config/theme.dart';
 import 'package:lazycook/core/viewmodels/person/settings.dart';
 import 'package:lazycook/ui/route/nav.dart';
 import 'package:lazycook/ui/shared/colors.dart';
+import 'package:lazycook/ui/shared/styles.dart';
 import 'package:lazycook/ui/widgets/button.dart';
 import 'package:lazycook/ui/widgets/custom_state.dart';
 import 'package:lazycook/ui/widgets/main_widget.dart';
@@ -38,6 +40,7 @@ class _SettingsPageState extends CustomState<SettingsPage> {
   Widget buildWidget(BuildContext context) {
     return Scaffold(
       body: MainWidget(
+        decoration: BoxDecoration(color: backgroundGray),
         statusBarColor: white,
         headerDecoration: BoxDecoration(color: white),
         titleColor: Colors.black,
@@ -48,12 +51,62 @@ class _SettingsPageState extends CustomState<SettingsPage> {
           model: _settingsModel,
           onModelReady: (model) {},
           builder: (context, model, _) {
+            var colors = accentColors;
             return Container(
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  Container(),
+                  Container(
+                      margin: EdgeInsets.only(
+                          top: height(16), left: width(16), right: width(16)),
+                      decoration: BoxDecoration(
+                          color: white,
+                          borderRadius: BorderRadius.circular(width(6))),
+                      padding: EdgeInsets.symmetric(
+                          horizontal: width(10), vertical: height(10)),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(bottom: height(10)),
+                            child: Text(
+                              "主题色",
+                              style: textStyle(
+                                  color: themeAccentColor,
+                                  fontSize: sp(14),
+                                  fontWeight: FontWeight.w600),
+                            ),
+                          ),
+                          ListView.separated(
+                              shrinkWrap: true,
+                              padding: EdgeInsets.zero,
+                              physics: ScrollPhysics(),
+                              itemBuilder: (context, index) {
+                                return InkWell(
+                                  onTap: () {
+                                    Provider.of<ThemeModel>(context,
+                                            listen: false)
+                                        .changeColor(index);
+                                  },
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                        color: colors[index],
+                                        borderRadius:
+                                            BorderRadius.circular(width(6))),
+                                    width: double.infinity,
+                                    height: height(40),
+                                  ),
+                                );
+                              },
+                              separatorBuilder: (context, index) {
+                                return SizedBox(
+                                  height: height(10),
+                                );
+                              },
+                              itemCount: colors.length),
+                        ],
+                      )),
                   Button(
                     text: "退出登陆",
                     width: double.infinity,

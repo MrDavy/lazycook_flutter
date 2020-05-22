@@ -53,7 +53,7 @@ class CodeWidgetState extends BaseState<CodeWidget> {
                       Container(
                         height: height(20),
                         width: width(1),
-                        color: accentColor,
+                        color: Theme.of(context).accentColor,
                       ),
                       Text(
                         "",

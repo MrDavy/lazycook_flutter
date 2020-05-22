@@ -69,6 +69,7 @@ dependencies:
   url_launcher: ^5.4.7
   open_file: ^3.0.1
   google_fonts: ^1.1.0
+  flutter_svg: ^0.17.4
 dev_dependencies:
   flutter_driver:
     sdk: flutter
@@ -94,6 +95,7 @@ flutter:
   assets:
     - assets/images/
     - assets/flare/
+    - assets/svg/
     - assets/pem/rsa-public.pem
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -48,7 +48,7 @@ class _PwdInputWidgetState extends CustomState<PwdInputWidget> {
   Widget buildWidget(BuildContext context) {
     _themeData = Theme.of(context);
     _inputDecoration =
-        createDecoration(borderColor, accentColor, _themeData.errorColor);
+        createDecoration(borderColor, themeAccentColor, _themeData.errorColor);
     return WillPopScope(
         child: ChangeNotifierProvider<PwdInputModel>(
           create: (context) => _model,
@@ -122,7 +122,7 @@ class _PwdInputWidgetState extends CustomState<PwdInputWidget> {
     return Button(
       text: "提交",
       margin: EdgeInsets.fromLTRB(width(0), height(22), width(0), height(0)),
-      accentColor: accentColor,
+      accentColor: themeAccentColor,
       onPressed: () async {
         if ((_formKey.currentState as FormState).validate()) {
           FocusScope.of(context).requestFocus(FocusNode());
@@ -162,7 +162,7 @@ class _PwdInputWidgetState extends CustomState<PwdInputWidget> {
           cursorWidth: width(1),
           textAlignVertical: TextAlignVertical.center,
           textInputAction: TextInputAction.done,
-          cursorColor: accentColor,
+          cursorColor: themeAccentColor,
           obscureText: Platform.isIOS ? false : !pwdVisible,
           textCapitalization: TextCapitalization.words,
           keyboardType: TextInputType.visiblePassword,
@@ -175,7 +175,7 @@ class _PwdInputWidgetState extends CustomState<PwdInputWidget> {
             labelText: "密码",
             hintText: "请输入密码",
             labelStyle: inputLabelStyle(),
-            focusColor: accentColor,
+            focusColor: themeAccentColor,
             //下划线包裹icon
             prefixIcon: Icon(Icons.lock),
             suffixIcon: IconButton(

@@ -88,7 +88,7 @@ class CodeInputState extends CustomState<CodeInput> {
               Text(
                 "+86 ${widget.phone}",
                 style: textStyle(
-                    color: accentColor,
+                    color: themeAccentColor,
                     fontSize: sp(26),
                     fontWeight: FontWeight.w600),
               ),
@@ -122,7 +122,7 @@ class CodeInputState extends CustomState<CodeInput> {
           margin: EdgeInsets.only(top: height(48)),
           child: model.reSubmit
               ? Button(
-                  accentColor: accentColor,
+                  accentColor: themeAccentColor,
                   text: "重新提交",
                   onPressed: () async {
                     FocusScope.of(context).requestFocus(FocusNode());

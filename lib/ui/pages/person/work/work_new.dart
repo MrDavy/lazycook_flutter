@@ -467,7 +467,7 @@ class NewWorkState extends CustomState<NewWork> {
                           child: Text(
                             "上传成品图",
                             style: textStyle(
-                              color: accentColor,
+                              color: themeAccentColor,
                               fontSize: sp(14),
                             ),
                           ),
@@ -526,7 +526,7 @@ class NewWorkState extends CustomState<NewWork> {
           Text(
             title,
             style: textStyle(
-                color: accentColor,
+                color: themeAccentColor,
                 fontSize: sp(16),
                 fontWeight: FontWeight.w600),
           ),
@@ -565,7 +565,7 @@ class NewWorkState extends CustomState<NewWork> {
         focusedErrorBorder: InputBorder.none,
         focusedBorder: InputBorder.none,
         border: InputBorder.none,
-        focusColor: accentColor,
+        focusColor: themeAccentColor,
         hintStyle: textStyle(
             color: hintColor, fontWeight: FontWeight.w400, fontSize: sp(16)),
       ),
@@ -605,7 +605,7 @@ class NewWorkState extends CustomState<NewWork> {
           focusedBorder: InputBorder.none,
           border: InputBorder.none,
           hintText: hint,
-          focusColor: accentColor,
+          focusColor: themeAccentColor,
           hintStyle: textStyle(
               color: hintColor,
               fontWeight: FontWeight.w400,

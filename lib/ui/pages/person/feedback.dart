@@ -218,7 +218,7 @@ class _FeedbackPageState extends CustomState<FeedbackPage> {
           focusedBorder: InputBorder.none,
           border: InputBorder.none,
           hintText: hint,
-          focusColor: accentColor,
+          focusColor: themeAccentColor,
           hintStyle: textStyle(
               color: hintColor,
               fontWeight: FontWeight.w400,

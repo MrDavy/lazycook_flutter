@@ -140,8 +140,8 @@ class RecipeDetailWidgetState extends CustomState<RecipeDetailWidget>
                   : Icons.favorite_border,
               key: key,
               color: !(collectModel?.dish?.hasCollected == 1)
-                  ? Color(0xffffffff)
-                  : Color(0xffffffff),
+                  ? white
+                  : white,
               size: width(24),
             ),
           ),
@@ -351,7 +351,7 @@ class RecipeDetailWidgetState extends CustomState<RecipeDetailWidget>
                         child: Text(
                           steps[index].step,
                           style: textStyle(
-                              color: Color(0xff333333), fontSize: sp(14)),
+                              color: color_333, fontSize: sp(14)),
                         ),
                       ),
                       SizedBox(
@@ -441,7 +441,7 @@ class RecipeDetailWidgetState extends CustomState<RecipeDetailWidget>
                         child: Text(
                           materials[index].name,
                           style: textStyle(
-                              color: Color(0xff333333), fontSize: sp(14)),
+                              color: color_333, fontSize: sp(14)),
                         ),
                       ),
                       Padding(
@@ -449,7 +449,7 @@ class RecipeDetailWidgetState extends CustomState<RecipeDetailWidget>
                         child: Text(
                           materials[index].value,
                           style: textStyle(
-                              color: Color(0xff999999),
+                              color: color_999,
                               fontSize: sp(14),
                               fontWeight: FontWeight.w300),
                         ),
