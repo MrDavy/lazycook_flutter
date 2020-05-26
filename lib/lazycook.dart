@@ -37,7 +37,7 @@ class LazyCookApp extends StatelessWidget {
           title: '懒大厨',
 //          debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            brightness: Brightness.dark,
+            brightness: Brightness.light,
             splashFactory: NoSplashFactory(),
 //              splashColor: themeAccentColor,
             primaryColor: themeModel.accentColor,

@@ -34,8 +34,8 @@ class RegisterModel extends BaseModel {
     notifyListeners();
   }
 
-  Future register(params) async {
-    if (StringUtils.isEmpty(_avatar.path)) {
+  Future register(params) {
+    if (StringUtils.isEmpty(_avatar?.path)) {
       return realRegister(params);
     } else {
       return api.uploadImage({"type": "4"}, [_avatar.path]).then((value) {

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lazycook/ui/shared/calc.dart';
 
+import 'colors.dart';
+
 const headerStyle = TextStyle(fontSize: 35, fontWeight: FontWeight.w900);
 const subHeaderStyle = TextStyle(fontSize: 16.0, fontWeight: bold);
 

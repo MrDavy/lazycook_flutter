@@ -190,6 +190,7 @@ class RegisterPageState extends CustomState<RegisterPage> {
             "authCode": _codeEtController.text,
             "password": await EncryptUtils.encryptMD5(_pwdEtController.text)
           }));
+
           if (result == null) {
             Nav.back();
           }
@@ -263,6 +264,7 @@ class RegisterPageState extends CustomState<RegisterPage> {
             color: hintColor, fontWeight: FontWeight.w400, fontSize: sp(14)),
       ),
       validator: (v) {
+        logger.log("phone = $v");
         return v.trim().length <= 0
             ? "手机号不能为空"
             : Utils.validatePhone(v.trim()) ? null : "手机号格式有误";
@@ -412,7 +414,7 @@ class RegisterPageState extends CustomState<RegisterPage> {
                 mHeight: ScreenUtil.screenWidthDp);
             logger.log("result = ${result?.path}");
             if (StringUtils.isNotEmpty(result?.path)) {
-              _registerModel?.avatar = result?.path;
+              _registerModel?.avatar = result;
             }
           },
           child: Selector<RegisterModel, File>(
