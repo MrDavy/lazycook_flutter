@@ -73,7 +73,7 @@ class LoginPageState extends CustomState<LoginPage> {
   Widget buildWidget(BuildContext context) {
     _themeData = Theme.of(context);
     _inputDecoration =
-        createDecoration(borderColor, themeAccentColor, _themeData.errorColor);
+        createDecoration(Color(0xffff9900), themeAccentColor, _themeData.errorColor);
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
@@ -83,6 +83,7 @@ class LoginPageState extends CustomState<LoginPage> {
         ),
       ],
       child: Scaffold(
+        backgroundColor: white,
         appBar: AppBar(
           elevation: 0,
           backgroundColor: white,
