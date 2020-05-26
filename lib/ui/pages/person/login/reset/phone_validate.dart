@@ -24,8 +24,8 @@ class PhoneValidatePageState extends CustomState<PhoneValidatePage> {
 
   ///输入框参数
   FocusNode _phoneNode = FocusNode();
-  GlobalKey _formKey = GlobalKey<FormState>();
-  GlobalKey _phoneKey = GlobalKey<FormFieldState>();
+  GlobalKey _phoneValidateFormKey = GlobalKey<FormState>();
+  GlobalKey _phoneValidateKey = GlobalKey<FormFieldState>();
 
   Map _inputDecoration;
 
@@ -98,7 +98,7 @@ class PhoneValidatePageState extends CustomState<PhoneValidatePage> {
       accentColor: themeAccentColor,
       text: "下一步",
       onPressed: () async {
-        if ((_formKey.currentState as FormState).validate()) {
+        if ((_phoneValidateFormKey.currentState as FormState).validate()) {
           FocusScope.of(context).requestFocus(FocusNode());
           showCustomDialog(
               context: context,
@@ -134,7 +134,7 @@ class PhoneValidatePageState extends CustomState<PhoneValidatePage> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             Form(
-              key: _formKey,
+              key: _phoneValidateFormKey,
               autovalidate: false,
               child: Column(
                 children: <Widget>[
@@ -151,7 +151,7 @@ class PhoneValidatePageState extends CustomState<PhoneValidatePage> {
   /// 手机号输入框
   Widget _buildPhoneInput() {
     return TextFormField(
-      key: _phoneKey,
+      key: _phoneValidateKey,
       autofocus: true,
       focusNode: _phoneNode,
       controller: _phoneEtController,

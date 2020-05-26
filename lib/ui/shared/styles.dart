@@ -19,7 +19,9 @@ TextStyle textStyle({color, fontSize, fontWeight, height, decoration}) {
 }
 
 TextStyle inputLabelStyle() {
-  return TextStyle(fontWeight: FontWeight.w400, fontSize: sp(14));
+  return GoogleFonts.sourceSansPro(
+    textStyle: TextStyle(fontWeight: FontWeight.w400, fontSize: sp(14)),
+  );
 }
 
 List<BoxShadow> getBoxShadows(Color color,
