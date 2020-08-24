@@ -14,7 +14,7 @@ description: A new Flutter application.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.2.2 <3.0.0"
+  sdk: ">=2.0.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -30,9 +30,9 @@ dependencies:
   encrypt: ^4.0.0
   #  logging: 0.11.3+2
   #  rxdart: ^0.22.1
-  connectivity: 0.4.8+6
+  connectivity: 0.4.9+2
   #用于list比较
-  collection: 1.14.12
+  collection: 1.14.13
   device_info: 0.4.0+2
   flutter_swiper: ^1.1.6
   json_annotation: ^2.0.0
@@ -52,7 +52,7 @@ dependencies:
   provider: ^4.0.1
   #  fish_redux: 0.2.5
   dio_flutter_transformer: ^3.0.2
-  webview_flutter: ^0.3.19+5
+  webview_flutter: ^0.3.22+1
   # add flutter_ScreenUtil
   flutter_screenutil: ^0.7.0
   flare_flutter: ^1.8.3
@@ -66,10 +66,10 @@ dependencies:
   image_gallery_saver: ^1.2.2
   permission_handler: ^4.1.0
   package_info: ^0.4.0+16
-  url_launcher: ^5.4.7
+  url_launcher: ^5.5.0
   open_file: ^3.0.1
   google_fonts: ^1.1.0
-  flutter_svg: ^0.17.4
+  flutter_svg: ^0.18.1
 dev_dependencies:
   flutter_driver:
     sdk: flutter
@@ -77,8 +77,6 @@ dev_dependencies:
   mockito: ^4.1.1
   flutter_test:
     sdk: flutter
-  build_runner: ^1.0.0
-  json_serializable: ^2.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

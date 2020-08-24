@@ -58,15 +58,11 @@ abstract class CustomState<T extends StatefulWidget> extends BaseState<T>
     var type =
         Provider.of<UserModel>(context, listen: false).hasUser == true ? 1 : 0;
     if (type == 0) {
-      if (await toLogin() ?? false) {
+      if (await login("") ?? false) {
         type = 2;
       }
     }
     return type;
-  }
-
-  Future toLogin() {
-    return Nav.pageTo(context, Routers.login);
   }
 
   Future simpleFuture(Future future,

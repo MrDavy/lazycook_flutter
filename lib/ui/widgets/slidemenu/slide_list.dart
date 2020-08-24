@@ -61,7 +61,7 @@ class SlideListViewState<T> extends BaseState<SlideListView> {
     return EasyRefresh.custom(
       enableControlFinishRefresh: true,
       enableControlFinishLoad: true,
-      emptyWidget: widget.emptyView,
+      emptyWidget: widget.emptyView(context),
       header: widget.refreshHeader ?? easyHeader(),
       footer: widget.refreshFooter ?? easyFooter(),
       controller: widget.controller,

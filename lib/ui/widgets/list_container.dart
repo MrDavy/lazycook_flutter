@@ -128,7 +128,7 @@ class ListContainer extends StatelessWidget {
         return EasyRefresh.custom(
           enableControlFinishRefresh: true,
           enableControlFinishLoad: true,
-          emptyWidget: emptyView,
+          emptyWidget: emptyView(context),
           header: refreshHeader ?? easyHeader(),
           footer: refreshFooter ?? easyFooter(),
           controller: controller,

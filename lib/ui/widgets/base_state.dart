@@ -51,9 +51,10 @@ abstract class BaseState<T extends StatefulWidget> extends State<T> {
     }
   }
 
-  void login(from) {
-    Nav.pageTo(context, Routers.login,
+  Future login(from) {
+    return Nav.pageTo(context, Routers.login,
         param: {'scence': from},
         transition: TransitionType.cupertinoFullScreenDialog);
   }
+
 }
